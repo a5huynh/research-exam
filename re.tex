@@ -30,7 +30,7 @@
 \maketitle
 
 \begin{abstract}
-In the past decade, ``human computation'' or ``crowdsourcing'' has emerged as 
+In the past decade, ``human computation'' and ``crowdsourcing'' has emerged as 
 a new field of research leveraging the vast human connectivity offered by 
 the Internet to solve problems that are often too large for individuals or 
 too challenging for current automatic methods. While the physical preservation 
@@ -45,65 +45,95 @@ implications of crowdsourcing on the future of cultural heritage preservation.
 \end{abstract}
 
 \section{Introduction}
-The rise of "human computation" or "crowdsourcing" ~\cite{Howe2006} as a field
-of research emerged from attempts to harness and motivate individuals to finish
-small tasks by either creating enjoyable experiences~\cite{VonAhn2008}, 
-appealing to scientific altruism~\cite{Cooper2010}, payment~\cite{Kittur2008},
-or related services in exchange for participation~\cite{Hull2006}. 
+The rise of "human computation"~\cite{VonAhn2009} and 
+"crowdsourcing"~\cite{Howe2006} as a field of research emerged from attempts to 
+harness and motivate individuals to finish small tasks by either creating 
+enjoyable experiences~\cite{VonAhn2008}, appealing to scientific 
+altruism~\cite{Cooper2010}, payment~\cite{Kittur2008}, or related services in 
+exchange for participation~\cite{Hull2006}. 
 
-These systems have been applied to tackle enormous problems ranging from image 
-annotation~\cite{VonAhn2004}, galaxy classification~\cite{Lintott2008}, protein 
-folding~\cite{Cooper2010}, and text transcription~\cite{VonAhn2008}. 
-They have systematically demonstrated that reliable data can be collected in 
-large amounts through incremental contributions from huge numbers of participants.
+The term crowdsourcing was first coined in 2006 by Jeff Howe in a Wired 
+magazine article~\cite{Howe2006}, referring to the concept as a method
+and business model~\cite{Howe2008} of outsourcing tasks to the crowd. This 
+outsourcing attempts to harness the power of a distributed network of cheap 
+labor; people who are motivated to use their spare time to finish small tasks 
+traditionally performed by an employee. In recent years, the small tasks outsourced 
+have become increasingly complex, relying more and more on human intelligence 
+to discover a solution.
+
+Related to, but not synonymous with crowdsourcing is the concept of human 
+computation. Human computation, a term used as early as in 1838~\cite{Quinn2011}
+and more recently and appropriately in Luis Von Ahn's Ph.D.\ dissertation, referring to the 
+idea of using human cognitive abilities to ``solve problems that
+computers cannot yet solve~\cite{VonAhn2009}.'' These human ``computations'' can 
+refer to not only to numerical computations but those that require creativity, 
+intuition, pattern recognition, and other forms of human cognitive processing. 
+Thus, while human computation does not necessitate the use of crowdsourcing, it 
+is often paired together in order to accomplish the end goal.
+
+Human computation systems using crowdsourcing have been applied to tackle enormous 
+problems in multiple fields ranging from image annotation~\cite{VonAhn2004}, galaxy 
+classification~\cite{Lintott2008}, music annotation~\cite{Turnbull2007},
+text transcription~\cite{VonAhn2008}, protein folding~\cite{Cooper2010}, 
+and remote damage assessment for disaster response~\cite{Barrington2012}. They
+have systematically demonstrated that reliable data can be collected in large 
+amounts through incremental contributions from huge numbers of participants.
 
 Growing in parallel with the rise in data collection 
 capabilities~\cite{Crane2002}, digital cultural heritage refers to a variety of 
 activities from the development of digital technologies used in exhibits to the 
 collection~\cite{Proctor2010}, preservation~\cite{Chrons2011}, and 
 interpretation of cultural heritage objects and locations from around the 
-world. Specifically, the task of digitizing cultural heritage has had many 
-successes with harnessing the power of "crowdsourcing." Indeed, the locality of 
-cultural heritage and the impact it may have on the world presents a unique 
-crowdsourcing task wherein the beneficiaries of the tasks may often be the 
-participants themselves.
+world. Over the years, human computation and crowdsourcing have been incorporated
+in more and more cultural heritage projects. One of its greatest successes, 
+the digitization and transcription of ancient texts~\cite{Owens2013,Chrons2011,VonAhn2008a}
+have led to the preservation and digitization of numerous important historical 
+texts, including the Dead Sea 
+Scrolls~\footnote{http://www.google.com/culturalinstitute/about/deadseascroll/}
+, ancient Greek scrolls~\footnote{http://ancientlives.org/}, and Civil War 
+Diaries~\cite{Owens2013}. The very essence of cultural heritage invites
+public dissemination and accessibility, allowing the masses to explore
+and connect with the past. Indeed, the locality of cultural heritage and 
+the impact it may have on the world presents unique human computation tasks wherein 
+the beneficiaries of the tasks may often be the participants themselves.
 
-To understand how crowdsourcing has become the field it is today and its 
-applications to cultural heritage, we start by examining the different methods 
-of crowdsourcing and how they distribute small tasks that benefit from human 
-involvement (Section~\ref{sec:active} \& \ref{sec:passive}). We can then 
-examine how different approaches, ranging from simple clustering techniques to 
-machine learning, can be applied to the crowdsourced data to extract insight 
-(Section~\ref{sec:learning}). Following the discussion of those techniques, we 
-examine how human involvement in those techniques through active feedback or 
-even replacing components to the workflow can lead to even greater insight 
-(Section~\ref{sec:the-crowd-machine}). Finally, we examine how the preservation 
-of cultural heritage may benefit from the distributed human involvement of 
-crowdsourcing (Section~\ref{sec:applications-heritage}).
+To understand how crowdsourcing and human computation has become the field 
+it is today and its applications to cultural heritage, we start by 
+examining the different methods of crowdsourcing and how they distribute 
+small tasks that benefit from human involvement (Section~\ref{sec:active} 
+\& \ref{sec:passive}). We can then examine how different approaches, ranging 
+from simple clustering techniques to machine learning, can be applied to the 
+crowdsourced data to extract insight (Section~\ref{sec:learning}). %Following the discussion of those techniques, we 
+%examine how human involvement in those techniques through active feedback or 
+%even replacing components to the workflow can lead to even greater insight 
+%(Section~\ref{sec:the-crowd-machine}). 
+Finally, we examine how cultural heritage has benefited from the distributed human 
+involvement of crowdsourcing and human computation 
+(Section~\ref{sec:applications-heritage}).
 
 \section{Active Crowdsourcing}
 \label{sec:active}
 
-Traditional ``active'' crowdsourcing techniques rely on a platform in which 
-certain tasks can be requested for completion by the public~\cite{Howe2006}. 
-This platform can be represented as a singular website dedicated to a specific 
-task, such as galaxy classification in GalaxyZoo~\cite{Lintott2008}, or a 
-larger market place in which many different types of tasks can be requested, 
-such as the human intelligence tasks (HITs) in the Amazon Mechanical 
-Turk~\footnote{http://www.mturk.com/mturk/} marketplace.
+Traditional, ``active'', crowdsourcing techniques first described by Howe in 
+2006 rely on a platform in which certain tasks can be requested for completion 
+by the public~\cite{Howe2006}. This platform can be represented as a singular 
+website dedicated to a specific task, such as galaxy classification in 
+GalaxyZoo~\cite{Lintott2008}, or a larger market place in which many different 
+types of tasks can be requested, such as the human intelligence tasks (HITs) 
+in the Amazon Mechanical Turk~\footnote{http://www.mturk.com/mturk/} marketplace.
 
-On a fundamental level, all these different platforms adhere to a set of
-principles that enable individuals to finish a task in a meaningful manner and 
-accomplish the overarching goal of the platform. A platform must utilize a 
-method of engagement to attract participants, design tasks in such a way that 
-participants can efficiently complete the task, and include constructs to 
-ensure a high-quality of data output.
+At a very fundamental level, these different crowdsourcing platforms must adhere to a 
+set of principles that enable participants to finish a task in a meaningful manner 
+and accomplish the overarching goals of the platform. Specifically, a platform must
+be able to engage and attract participants, design tasks in such a 
+way that participants can efficiently complete the task, and include constructs 
+to ensure a high-quality of data output.
 
 \subsection{Crowd Engagement}
 \label{sec:engagement}
 
 Engaging a large pool of labor and presenting compelling motivation to complete
-is an essential piece of a platform's success. Here we examine three different
+tasks is essential to a platform's success. Here we examine three different
 types of engagement: ``Value Incentives", ``The Greater Good", and ``Games With A 
 Purpose."
 
@@ -117,34 +147,45 @@ forms:
 	\item
 		\textbf{Cold Hard Cash} - Marketplaces such as Amazon Mechanical Turk
 		present a financial reward in the exchange for completion of tasks.
+		This financial reward is set by the task assigner and can vary
+		depending on the difficulty or length of the task.
 	\item
 		\textbf{Products and/or services} - The recent introduction of 
-		``crowdfunding''~\cite{Belleflamme2011,Schwienbacher2010} platforms 
+		``crowdfunding''~\cite{Howe2008,Belleflamme2011,Schwienbacher2010} platforms 
 		such as Kickstarter~\footnote{http://www.kickstarter.com} allow the
-		sourcing of money contributions instead of tasks in exchange for an 
+		outsourcing of money contributions instead of tasks in exchange for an 
 		end product or service that is created utilizing the monetary
-		contributions.
+		contributions. Crowdfunding is less about utilizing human intelligence
+		for computation tasks and more about harnessing the power of a particular
+		community to fund and connect them to services or products.
 \end{itemize}
 
-An impressive example of how powerful a value incentive may motivate people is
+An impressive example of how motivating a value incentive can be is
 the 2009 Red Balloon Challenge. Teams competed for a \$40,000 prize to find 
-10 weather balloons deployed at undisclosed locations across the U.S. A single
-team found all balloons in the span of 8 hours using crowdsourcing with 
-monetary incentivisation which divided the prize money with participants who
-found the balloons~\cite{Tang2011}. This method quickly motivated thousands of 
-participants to find the balloons. However, while value incentives may quickly 
-motivate a large number of participants, it is important to note that the quality 
-of the data received does not increase with the value offered~\cite{Mason2010a}.
+10 weather balloons deployed at undisclosed locations across the continental 
+United States. The only team to find all balloons accomplished the task in the 
+span of 8 hours with crowdsourcing and a unique monetary incentivisation method. 
+Their hierarchal incentivisation divided the prize money with participants who 
+found the balloons~\cite{Tang2011}, creating a motivation to discover the balloons 
+and share the task with as many participants as possible. This method quickly 
+motivated thousands of participants to search for the balloon and disseminate
+the task on social media sites with the hopes of claiming a piece of the prize.
+However, due to the public nature and competitiveness of the task, the team 
+experienced plenty of potentially inaccurate and fraudulent submissions. This
+negative outcome demonstrates that while value incentives map quickly motivate 
+a large number of participants, it is important to note that the quality of 
+the data received does not increase with the value offered~\cite{Mason2010a}
+and constructs must be placed to ensure the highest quality of collected data.
 
 \subsubsection*{The Greater Good}
 
 In contrast to participants in \textit{Value Incentive} category, 
-participants who are engaged and motivated to contribute to a platform through 
-only the concept of pushing forward overarching goals without compensation 
-can be seen as ``citizen scientists'', serving \textit{The Greater Good}. These 
-citizen scientists often act as collaborators on these platforms volunteering 
-their time to map streets around the world~\cite{Haklay}, classify 
-galaxies~\cite{Lintott2008}, translate ancient 
+participants who are engaged and motivated to contribute to a platform 
+incentivized by only the idea of pushing forward humanity can be seen 
+as ``citizen scientists'', serving \textit{The Greater Good}. These 
+citizen scientists often act as collaborators with the task assigners,
+volunteering their time to map streets around the world~\cite{Haklay}, 
+classify galaxies~\cite{Lintott2008}, translate ancient 
 texts~\footnote{http://www.ancientslives.org}, and even assess satellite 
 imagery to aid emergency disaster response~\cite{Barrington2012,Goodchild2010}.
 
@@ -161,54 +202,83 @@ method of collecting and interpreting scientific data.
 \subsubsection*{Games With A Purpose}
 
 Games With A Purpose (GWAPs)~\cite{VonAhn2008} attempts to engage individuals
-through personal enjoyment or social reward by creating a game environmentt
-in which crowdsourcing tasks may take place. GWAPs are often related to the 
+through personal enjoyment or social reward by creating a game environment
+in which crowdsourced tasks take place. GWAPs are often related to the 
 process of ``gamification'', wherein game elements are added to what may be 
 a mundane task, such as image annotation~\cite{VonAhn2004}, in order to motivate 
 and engage participants in the task.
 
+While there exist GWAPs where participants may contribute solely for their own 
+entertainment value, such as those built around image 
+annotation~\cite{VonAhn2004,Ahn2007a,Ahn2006} and collecting ``common-sense 
+facts''~\cite{VonAhn2006}, GWAPs can be and often are coupled with the 
+previously mentioned \textit{Value Incentive} and \textit{The Greater Good} 
+methodology as a means for additional motivation and engagement. 
 
-GWAPs can be and often are coupled with the previously mentioned \textit{Value 
-Incentive} and \textit{The Greater Good} methodology as a means for additional 
-motivation and engagement. Foldit~\cite{Cooper2010}, a crowdsourced effort to 
-produce accurate protein structure models, successfully uses this model of
-engagement attracting players who were not only interested in their potential
-contributions to a scientific field but the interaction with other competitive
+A recent GWAP, Foldit~\cite{Cooper2010}, created a crowdsourced effort to 
+produce accurate protein structure models, successfully using this engagement
+and motivation model to attract players who were not only interested in their 
+potential contributions to a scientific field but the interaction with other competitive
 players in a game environment as well. In cultural heritage, \textit{Exploration:
 Mongolia}~\footnote{http://exploration.nationalgeographic.com} uses this approach
 to motivate ``armchair archaeologists'' to annotate satellite imagery to aid
 the search the Tomb of Genghis Khan in a game environment.
 
+\subsubsection*{Discussion}
+
+Crowdsourcing requires a large distributed network of participants to 
+successfully complete tasks and depending on the nature of the task 
+different models of engagement and motivation can be applied. Generally,
+a combination of engagement and motivation methods are used to attract
+the largest number of participants, although not completely necessary. 
+Furthermore, it is important to note that while financial incentives 
+have the ability to motivate large number of participants and are utilized 
+as the business models for platforms such as Amazon Mechanical Turk, it 
+was found that greater financial reward does not necessitate greater 
+motivation and quality from the participants~\cite{Mason2010a}.
+
+Once the task is scaled up to enough participants, we arrive at 
+the question of data quality and how to ensure the highest level of output
+when we are receiving data from a participants with differing levels
+of experience and knowledge.
+
 \subsection{Quality Control}
+\label{sec:quality-control}
 
 A major issue often discussed in crowdsourcing research is the interesting 
 data quality control problems that occur when accepting potentially 
 inaccurate or even fraudulent data from human participants. Verifying the
 quality of every submitted data point without existing automated methods can 
-be as expensive as the process of collecting the data. As such, researchers
-have used a variety of methods to ensure a higher quality of output from
-participants.
+be as expensive, if not more, as the process of collecting the initial 
+data~\cite{Ipeirotis2010a}. As such, researchers have used a variety of 
+methods to ensure a higher quality of output from participants which
+we explore below.
 
 
 \subsubsection*{Automatic Verification}
-Crowdsourcing efforts like Foldit~\cite{Cooper2010}, while difficult to
-formulate solutions involve problems with easily verifiable solutions that
-can be automatically checked as soon as the task is completed.
+
+Some crowdsourcing efforts like Foldit~\cite{Cooper2010} have difficult
+solutions but involve problems that can be easily verified. Automatic
+verification can be used to check the quality of solutions as soon
+as a task is completed, often times awarding the participant who
+found the solution.
 
 
 \subsubsection*{Agreement}
-Perhaps one of the first methods of quality control, examples of agreement
-can be seen in the ESP game~\cite{VonAhn2004} and TagATune~\cite{Law2009a}.
-Agreement accepts input if \textit{all} participants agree on the same 
-solution for a task. 
+Perhaps one of the first methods of quality control, different examples of 
+agreement can be seen in the ESP game~\cite{VonAhn2004} and 
+TagATune~\cite{Law2009a}. Quality control with agreement accepts input 
+if \textit{all} participants agree on the same solution for a task.
+The number of participants required to finally accept a solution is
+a minimum of two and can vary according to the task.
 
 Agreement can occur before or after a task, respectively
 known as input agreement and output agreement. Input agreement, utilized in 
-TagATune, involves giving independent participants inputs with that may or 
+TagATune, involves giving independent participants inputs that may or 
 may not be the same and asked to describe the inputs to each other to 
-determine the solution to the problem. Output agreement, utilized in the
-ESP game, accepts a solution to a task only after two participants agree
-on the same solution.
+determine the solution to the task. Contrastingly, output agreement, 
+utilized in the ESP game, accepts a solution only after two or more 
+participants agree on the same solution.
 
 
 \subsubsection*{Redundancy}
@@ -221,10 +291,15 @@ work.
 
 
 \subsubsection*{Reputation}
-In reputation systems, a participants quality of work is determined through
-the quality of previous inputs. Reputation can be used to immediately filter 
-out participants who have a high potential of inaccurate input. This method 
-is employed Amazon Mechanical Turk.
+In reputation systems, a participant's quality of work is determined through 
+previous inputs. The quality of a given past input can be determined by the 
+task assigner or reviewed by other participants.
+
+Reputation can be used to immediately filter out participants who have a 
+high potential of inaccurate input. Amazon Mechanical Turk employs
+reputation systems to allow task assigners to specify a minimum reputation 
+level for any HITs that are created, thereby ensuring a certain level
+of quality in the data that is collected.
 
 
 \subsubsection*{Expert/Crowdsourced Review}
@@ -235,13 +310,15 @@ or after the initial tasks are completed.
 An example of crowdsourced review, Soylent~\cite{Bernstein2010} employs 
 this method as the \textit{Find-Fix-Verify} pattern, splitting tasks 
 into three stages that filter out inaccurate solutions at each stage 
-through redundancy.
+through redundancy. Monetary rewards, such as those offered for
+HITs on Amazon Mechanical Turk, can be withheld until a solution
+is reviewed and accepted.
 
 
 \subsubsection*{Statistical Filtering}
 If the solution for a task is expected to match some distribution, 
 such as in Quality of Experience evaluations~\cite{Chen2009}, researchers 
-can filter out inaccurate data points.b
+can filter out inaccurate data points.
 
 
 \subsubsection*{Annotation Models}
@@ -308,13 +385,13 @@ consumer-centric mobile devices or other computing devices with wireless
 capabilities that produce data as a participant interacts with the device 
 or world through their existing behavior.
 
-A remarkable example of crowdsensing without mobile sensors is
+A remarkable example of crowdsensing without the use of mobile sensors is
 Google Flu Trends (GFT)~\footnote{http://www.google.org/flutrends}. 
 GFT uses search query data for influenza related search terms provided 
 by millions of Google users to estimate influenza activity. These 
 results have been shown as an accurate predictor of influenza 
-trends~\cite{Dugas2012} accurately tracking influenza even before 
-national disease centers.
+trends~\cite{Dugas2012} tracking influenza even before 
+major national disease centers.
 
 Building upon the existing need and activity of checking
 traffic, Google Traffic~\cite{GoogleTraffic} and VTrack~\cite{Thiagarajan2009}
@@ -326,18 +403,17 @@ to 3D reconstruction from photographs~\cite{Agarwal2009,Frahm2010},
 which requires large amounts of imagery, has benefitted from
 crowdsensing through the use of publicly available photographs
 on websites such as Flickr~\footnote{http://www.flickr.com}. This 
-example is especially useful in digital preservation, where 
-publicly available photos, such as those provided by tourists,
-of important cultural heritage sites could be used to construct
-models for preservation purposes.
+example is especially useful in digital preservation of cultural
+heritage, where publicly available photos, such as those taken 
+by tourists, of important cultural heritage sites could be used 
+to construct models.
 
 
 \section{Learning from the Crowd}
 \label{sec:learning}
-
 Crowdsourcing has the potential to collect an enormous amount of
-information, all of which can be harnessed to partially automate
-the tasks from which the data originated through the use of 
+information, all of which can be harnessed to partially or fully 
+automate the tasks from which the data originated through the use of 
 machine learning. Machine learning approaches excel at recognizing
 consistent patterns among labeled training examples, such as those
 provided by crowdsourcing participants, which can then be used to 
@@ -355,24 +431,149 @@ While traditional machine learning approaches focus on a single,
 fixed training set to learn static models, crowdsourced data presents
 a source of temporally dynamic data which can be used to continually
 create new, improved models. This methodology, known as active 
-learning~\cite{Settles2010}, has been shown to produce reliable,
-accurate models~\cite{Barrington2012}.
+learning~\cite{Druck2009,Settles2010}, has been shown to produce reliable,
+accurate models~\cite{Barrington2012,Brew2010}.
+
 
 \subsection{Active Learning}
+Active learning techniques can be categorized into two overarching 
+methodologies based on how additional information is acquired to 
+improve the underlying model. \textit{Pool-based}~\cite{McCallum1998} 
+sampling approaches allow an algorithm to choose from a typically large set
+of unlabeled data based on some quantitative measure, while 
+\textit{stream-based}~\cite{Freund1997} or \textit{online} sampling approaches 
+require a decision as each unlabeled instance is queried. Pool-based methods 
+are typically studied in more detail, used in approaches stemming from text
+classification~\cite{Lewis1994,Yan2011}, image classification, and more.
 
-The key idea behind active learning is that a machine learning algorithm can
-achieve greater accuracy with fewer training labels if it is allowed to choose the
-data from which it learns.
+Alternatively, we can split active learning algorithms based on
+the types of training data available. \textit{Discriminative} methods 
+harness both positive and negative training data to create a model. 
+In contrast, \textit{generative} methods require only positive training 
+data while negative training data does not increase the accuracy of the model.
+
+Active learning presents a simple, powerful approach to harness crowdsourced
+human annotators in collaboration with machine learning techniques to 
+continually formulate new, improved models as more and more data is collected.
+
+
+\subsection{Closing the loop}
+Querying new training instances through uncertainty sampling~\cite{Lewis1994}
+involves the selection of instances that have low classification or prediction
+confidence. Using this selection criteria, we can have new human annotators 
+label instances where we have low confidence, re-train our model, and repeat
+the process thus completing the loop between machine learning and human
+annotators.
+
+While uncertainty sampling provides us with a useful criterion for selecting
+unlabeled instances, it does not provide a method to select a annotator. 
+Annotation modeling methods discussed in Section~\ref{sec:quality-control} can
+potentially be used to pair new unlabeled instance with an optimal annotator.
+Karger et. al~\cite{Karger} used bipartite graphs to model tasks and annotators.
+Yan et.\ al~\cite{Yan2011} presents an optimization problem to select the best possible annotator based on the current iteration of data and model.
+
+Due to the fact that human annotations are inherently noisy, an open research
+question~\cite{Settles2010} is the decision of whether to label a new 
+unlabeled instance or repeat the labeling of an existing instance to 
+potentially improve the model. Research~\cite{Sheng2008} using heuristics
+representing uncertainty in both the human annotators and the active learning 
+model have shown that repeated labeling improves the overall data collected but
+assumes that all human annotators represent the same level of expertise and
+that there exists some true label for any instance. Addressing the first 
+assumption, Donmez et.\ al~\cite{Donmez2009} by allowing human annotators to
+have different ``noise'' levels showing that both true labels and the 
+expert level of individual human annotators can be estimated, thus allowing
+them to query only the more expert human annotators in later active learning
+iterations.
 
 \section{Applications in Cultural Heritage}
 \label{sec:applications-heritage}
+While the majority of crowdsourcing techniques have thus far focused on fields
+outside of cultural heritage, the massive data collection capabilities of the
+crowd have started to find ways to improve the interpretation, digital 
+preservation, and exploration/discovery of cultural heritage objects and sites
+of interest.
 
-\section{Conclusion}
+More importantly, the engagement of the public with the interpretation, 
+preservation, and discovery of cultural heritage offers an opportunity for
+someone to do something more than simply consume information, ``engag[ing] them
+in the fundamental reason that these digital collections exist in the
+first place~\cite{Owens2013}.''
+
+\subsection{Interpretation}
+
+In museums, collections of cultural heritage objects are traditionally organized
+into galleries based around a common theme by professional curators. This
+organization helps museum visitors interpret the collections~\cite{Aletras2012}
+For digital collections, there may not be an clear organization or theme making
+large collections of digital collections overwhelming. 
+
+BBC \textit{WW2 People's War}
+\footnote{http://www.bbc.co.uk/history/ww2peopleswar} was a platform
+where the public was allowed to submit ``memories'' of World War 2 collecting 
+over 47,000 stories and 14,000 images of how an entire generation 
+interpreted the war and preserving it for future generations. This platform
+provided a unique opportunity for a generation of people to provide their 
+own interpretations and get in touch with others we shared the same 
+experiences.
+
+The datasets that make up large digital collections make curation by the crowd 
+a viable solution albeit one that has not fully been explored for the cultural
+heritage domain.
+
+\subsection{Digital Preservation}
+
+Perhaps the earliest example of using crowdsourcing for cultural heritage was
+the use of CAPTCHAs~\cite{Ahn2003}, an automated test to tell humans and computers apart, to transcribe and digitize old texts. CAPTCHAs typically 
+consist of an image containing random distorted characters, used as a challenge
+response during Web form registrations or submissions to prove that the 
+submitter is human. The distorted characters present a significantly 
+difficult problem for computers or ``bots'' that attempt to automatically submit Web forms, while only a minor inconvenience for humans.
+
+Foundations and projects such as the Google Books Project have been scanned 
+in an attempt to preserve human knowledge and make it more accessible. While
+optical character recognition (OCR) technology can transcribe a large majority
+of the imagery scanned, there  exists a significant chunk 
+(20\%~\cite{VonAhn2008a} of all scanned text) that require human transcription,
+who tend to be expensive. Through the combination of CAPTCHAs and the scanned 
+imagery from text digitization projects, reCAPTCHAs~\cite{VonAhn2008a} replaces 
+the random distorted characters used in CAPTCHAs with words that OCR programs
+can not recognize.
+
+Perhaps a more meaningful example that demonstrates the impact of 
+crowdsourcing cultural heritage preservation, the University of Iowa 
+libraries crowdsourced the transcription of a set of Civil War 
+diaries~\cite{Owens2013}. As a surprising byproduct of the transcription, the
+project dramatically increased the number of visitors to the library's
+website and was shown to be a novel meaningful engagement between the human
+annotators and this piece of history.
+
+\subsection{Exploration \& Discovery}
+
+New cultural heritage sites are still being unearthed and 
+analyzed~\cite{Lasaponara2007,Rowlands2007,Alexakis2009}, increasingly 
+through more modern methods, often utilizing large amounts of
+high resolution satellite imagery and aerial imagery. As the resolution of
+these images increase with improved technology, the amount of data that must
+be sifted through to discover new sites increases significantly.
+
+The \textit{Valley of the Khans} project opens this exploration and discovery
+process to the public through Exploration: 
+Mongolia~\footnote{http://exploration.nationalgeographic.com} an
+an online platform motivating human annotators to survey high-resolution
+satellite imagery in the hopes of discovering the lost tomb of Genghis Khan.
+Annotators are asked to categorize roads, rivers, modern structures, and
+ancient structures in the satellite imagery to assist field efforts in
+navigating the large study area. During three field surveys, over 100
+sites of interest were visited, resulting in the discovery of fifty-five
+archaeological sites, ranging a human existence of over 3000 years.
+
+\section{Towards the Future}
+\textcolor{red}{TODO}
+
 \section{Acknowledgements}
 Thanks to Professor Yoav Freund for chairing my research exam committee and 
 for Serge Belongie and Bill Griswold for participating on the committee.
-And most of all, thanks to the MTurkers who find research papers for certain 
-sections of this exam.
 
 \bibliography{bibs/ActiveLearning,bibs/Andrew-HCOMP,bibs/Andrew-CogSci,bibs/CulturalHeritage,bibs/hcomp,bibs/Web}
 \bibliographystyle{plain}
