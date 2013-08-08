@@ -327,14 +327,37 @@ can be verified and filtered through simple transitivity.
 
 
 \subsubsection*{Annotation Models}
+
 Modeling annotation processes~\cite{Karger,Welinder} using a set of variables 
 provide a rich method of quality control through the representation of 
-different factors that may lead to inaccurate data. Welinder et.\ 
-al~\cite{Welinder} uses a model to discover and represent groups of 
-participants with differing sets of skills and knowledge, increasing the 
-quality of data that can be determined from each group. Karger et.\ 
-al~\cite{Karger} takes this even further and uses a bipartite graph to model 
-both tasks and participants to determine an optimal task assignment.
+different factors that may lead to inaccurate data. These models can 
+group participants of certain skill levels together and allow researchers to
+filter or combine participants to improve accuracy.
+
+For instance, Welinder et.\ al~\cite{Welinder} look at a set of variables
+(competency, expertise, and bias) to represent the annotation ability of
+participants and the difficulty of the task, which in this case was
+annotating an image. The idea is that competent participants tend to provide
+accurate annotations while less competent participants provided 
+annotations with inconsistent accuracy. Participants may also have 
+certain ``strengths'' or levels of expertise that make certain solutions
+easier for them than others. Finally, the difficulty of certain images
+may lead to more inaccuracies even by the more competent participants.
+Through a Bayesian generative probabilistic model of the annotation process,
+Welinder et.\ al found that they could infer factors such as the difficulty
+of the image and participant competency and expertise.
+
+
+Karger et.\ al~\cite{Karger} takes this even further and models both tasks 
+and participants to determine an optimal task assignment. Through comparing 
+participants' solutions to the same task, we can infer a participant's 
+reliability and weigh their answers accordingly. This comparison is done
+by constructing a bipartite graph where each edge corresponds to a 
+task-participant assignment. An iterative algorithm updates the 
+reliability of a participant through each task, ending with a final
+estimate of the weighted sum of solutions using the reliability weights
+calculated.
+
 
 
 \section{Passive Crowdsourcing}
