@@ -385,11 +385,11 @@ and the ethics of gathering data without a participant's knowledge.
 
 
 \subsection{Parasitic Computing~\cite{Barabasi2001}}
-\label{sec:parastici-computing}
-Parasitic computing leverages existing behavior of individuals to 
-solve pieces of a complex computation problem, often without their
-explicit permission. This has involved harnessing small amounts of
-a participant's computational 
+\label{sec:parasitic-computing}
+First coined by Albert-Laszlo Barabasi in 2001, parasitic computing 
+leverages existing behavior of individuals to solve pieces of a complex 
+computation problem, often without their explicit permission. This 
+has involved harnessing small amounts of a participant's computational 
 power~\cite{Anderson2002,Merelo2007,Merelo-Guervos2008} or by 
 embedding the computations into an underlying standard 
 protocol~\cite{Barabasi2001,Kohring2003}.
@@ -397,11 +397,28 @@ protocol~\cite{Barabasi2001,Kohring2003}.
 Initially, parasitic computing utilized underlying standard protocols
 as a layer in which to do small pieces of computational work. For 
 example, Barabasi~\cite{Barabasi2001} utilized the Hyper Text 
-Transmission Protocol (HTTP) to perform calculations during the act 
-of communication between web servers. Kohring~\cite{Kohring2003}
-further explored this concept, embedding the computations as part of 
-the standard IP communication protocol through the use of carefully
-constructed ICMP packets.
+Transmission Protocol (HTTP) to perform calculations to solve
+a NP-complete satisfiability problem. The calculations were 
+accomplished using a standard characteristic of TCP, a checksum which
+is checked by a receiving computer and can be formulated such that
+the receiving computer performs any arithmetic operation. A special
+message is created to represent a potential solution to an NP-complete
+problem, such as 3-SAT, and sent to many targets. Since TCP messages
+with an incorrect checksum are dropped, only those that contained 
+a valid solution will receive a reply. 
+
+Kohring~\cite{Kohring2003} further explored this concept, embedding the 
+computations as part of the standard IP communication protocol through 
+the use of carefully constructed ICMP packets. The use of IP and ICMP
+increases the overall target surface as the targets are no longer
+restricted to HTTP servers like Barabasi implementation and any
+Internet capable device is required to implement ICMP. Much like 
+Barabasi, Kohring utilized a checksum in the ICMP message to encode
+the calculation needed. However, since ICMP does not contain a guarantee
+that a message will arrive in order or even arrive at all, the
+problems that can be solved are more restricted. In this case, 
+Kohring simulated a stochastic neural network due to its built-in 
+resilience to noise.
 
 More recent approaches harness idle or underutilized CPUs to do
 pieces of computational work. Acting as a screensaver for idle 
@@ -447,6 +464,33 @@ heritage, where publicly available photos, such as those taken
 by tourists, of important cultural heritage sites could be used 
 to construct models.
 
+\subsection{Discussion}
+
+In this section, we explored the concept of passive crowdsourcing
+which relies on the ability to gather data and/or perform computations
+as a result of existing participant behavior with or without their
+knowledge. The rise of embedded sensors in everyday computing
+devices such as mobile devices and the ever expanding network
+of Internet enable devices have created a largely untapped potential
+source of data and computational power. Parasitic computing taps
+into existing Internet infrastructure to perform computations, 
+such as using HTTP or ICMP checksums to harness the computation power of 
+other computers. Crowdsensing looks to using embedded sensors 
+available in everyday computing devices to capture useful information
+present in the existing behavior of participants, such as traffic
+or flu information.
+
+However due to the opportunistic nature of passive crowdsourcing, 
+especially in crowdsensing, sensitive data pertaining to individuals must
+be kept private and secure while also ensuring passive crowdsourcing
+applications still provide some level of utility. Some simple procedures,
+such as running analytics on the aggregate~\cite{Ganti2011} of all 
+data and only keeping data that is anonymous and unattached to any 
+single participant goes a long way to protecting the identity of the 
+participants on the platform. Alternatively, differential 
+privacy~\cite{Dwork2006} methods could be used to encrypt 
+sensitive data while still provided statistically accurate
+analysis.
 
 \section{Learning from the Crowd}
 \label{sec:learning}
