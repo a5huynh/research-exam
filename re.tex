@@ -504,8 +504,8 @@ label new, unlabeled data.
 
 Pattern recognition techniques rely on the extraction of features
 that describe the properties of the concept being recognized. For
-example, feature extraction in images can refer to edges or corners 
-seen in the image or color histograms. Machine learning algorithms
+example, feature extraction on images can refer to edges, corners,
+shapes, or even color distribution. Machine learning algorithms
 can then identify statistical consistencies between sets of
 features and can apply this knowledge to future sets of new,
 unlabeled data.
@@ -514,77 +514,107 @@ While traditional machine learning approaches focus on a single,
 fixed training set to learn static models, crowdsourced data presents
 a source of temporally dynamic data which can be used to continually
 create new, improved models. This methodology, known as active 
-learning~\cite{Druck2009,Settles2010}, has been shown to produce reliable,
+learning~\cite{Settles2010,Druck2009}, is able to query some outside
+source for additional information that can be used to improve a model.
+Generally, the additional information comes in the form of additional
+labels from participants that can be applied to instances with no
+clear classification. Active learning has been shown to produce reliable,
 accurate models~\cite{Barrington2012,Brew2010}.
 
 
 \subsection{Active Learning}
 Active learning techniques can be categorized into two overarching 
 methodologies based on how additional information is acquired to 
-improve the underlying model. \textit{Pool-based}~\cite{McCallum1998} 
-sampling approaches allow an algorithm to choose from a typically large set
-of unlabeled data based on some quantitative measure, while 
-\textit{stream-based}~\cite{Freund1997} or \textit{online} sampling approaches 
-require a decision as each unlabeled instance is queried. Pool-based methods 
-are typically studied in more detail, used in approaches stemming from text
-classification~\cite{Lewis1994,Yan2011}, image classification, and more.
+improve the underlying model. 
 
-Alternatively, we can split active learning algorithms based on
-the types of training data available. \textit{Discriminative} methods 
-harness both positive and negative training data to create a model. 
-In contrast, \textit{generative} methods require only positive training 
-data while negative training data does not increase the accuracy of the model.
+\textit{Stream-based}~\cite{Freund1997} or \textit{online} sampling 
+approaches require a decision as each unlabeled instance is queried. The key
+assumption in online active learning is that obtaining an unlabeled instance
+is free or inexpensive so it can be sampled from a source one at a time. Due to 
+the sequential querying nature of stream-based approaches, applications of 
+stream-based approaches must decide of whether or not to continue querying for 
+instances. This decision can rely on some ``informative measure'' or ``query 
+strategy'' such that more informative instances are more likely to be 
+queried~\cite{Settles2010}.
 
-Active learning presents a simple, powerful approach to harness crowdsourced
-human annotators in collaboration with machine learning techniques to 
-continually formulate new, improved models as more and more data is collected.
+In contrast, \textit{pool-based}~\cite{McCallum1998} sampling approaches allow an algorithm to choose from a typically large set of unlabeled data based on some quantitative measure and a small set of labeled data. For many real-world learning problems, a large set of unlabeled data can be gathered at once, for instance using crowdsourcing. Pool-based methods are typically studied in more detail, used in approaches stemming from text classification~\cite{Lewis1994,Yan2011}, natural language processing~\cite{Snow2008}, and more.
+
+Furthermore, we can categorized active learning algorithms based on the types of 
+training data available~\cite{Barrington2012}. \textit{Discriminative} methods 
+harness both positive and negative training data to create a model. In contrast, 
+\textit{generative} methods require only positive training data while negative 
+training data does not increase the accuracy of the model. 
+
+Active learning presents a simple, powerful approach to harness 
+crowdsourced human annotators in collaboration with machine learning 
+techniques to continually formulate new, improved models as more and more 
+data is collected.
 
 
 \subsection{Closing the loop}
-Querying new training instances through uncertainty sampling~\cite{Lewis1994}
-involves the selection of instances that have low classification or prediction
-confidence. Using this selection criteria, we can have new human annotators 
-label instances where we have low confidence, re-train our model, and repeat
-the process thus completing the loop between machine learning and human
-annotators.
+Querying new training instances through uncertainty 
+sampling~\cite{Lewis1994} involves the selection of instances that have low 
+classification or prediction confidence. Using this selection criteria, we 
+can have new human annotators label instances where we have low confidence, 
+re-train our model, and repeat the process thus completing the loop between 
+machine learning and human annotators.
 
-While uncertainty sampling provides us with a useful criterion for selecting
-unlabeled instances, it does not provide a method to select a annotator. 
-Annotation modeling methods discussed in Section~\ref{sec:quality-control} can
-potentially be used to pair new unlabeled instance with an optimal annotator.
-Karger et. al~\cite{Karger} used bipartite graphs to model tasks and annotators.
-Yan et.\ al~\cite{Yan2011} presents an optimization problem to select the best possible annotator based on the current iteration of data and model.
+While uncertainty sampling provides us with a useful criterion for 
+selecting unlabeled instances, it does not provide a method to select a 
+annotator. Annotation modeling methods discussed in 
+Section~\ref{sec:quality-control} can potentially be used to pair new 
+unlabeled instance with an optimal annotator. Karger et. al~\cite{Karger} 
+used bipartite graphs to model tasks and annotators. Yan et.\ 
+al~\cite{Yan2011} presents an optimization problem to select the best 
+possible annotator based on the current iteration of data and model.
 
-Due to the fact that human annotations are inherently noisy, an open research
-question~\cite{Settles2010} is the decision of whether to label a new 
-unlabeled instance or repeat the labeling of an existing instance to 
-potentially improve the model. Research~\cite{Sheng2008} using heuristics
-representing uncertainty in both the human annotators and the active learning 
-model have shown that repeated labeling improves the overall data collected but
-assumes that all human annotators represent the same level of expertise and
-that there exists some true label for any instance. Addressing the first 
-assumption, Donmez et.\ al~\cite{Donmez2009} by allowing human annotators to
-have different ``noise'' levels showing that both true labels and the 
-expert level of individual human annotators can be estimated, thus allowing
-them to query only the more expert human annotators in later active learning
-iterations.
+Due to the fact that human annotations are inherently noisy, an open 
+research question~\cite{Settles2010} is the decision of whether to label a 
+new unlabeled instance or repeat the labeling of an existing instance to 
+potentially improve the model. Research~\cite{Sheng2008} using heuristics 
+representing uncertainty in both the human annotators and the active 
+learning model have shown that repeated labeling improves the overall data 
+collected but assumes that all human annotators represent the same level of 
+expertise and that there exists some true label for any instance. 
+Addressing the first assumption, Donmez et.\ al~\cite{Donmez2009} by 
+allowing human annotators to have different ``noise'' levels showing that 
+both true labels and the expert level of individual human annotators can be 
+estimated, thus allowing them to query only the more expert human 
+annotators in later active learning iterations.
+
+
+\subsection{Discussion}
+By itself, crowdsourcing and human computation tasks are powerful but 
+difficult to scale without constantly active engagement and motivation. This
+section explored the utility of using crowdsourcing to gather a small, but still
+substantial set of annotated data to be used for training machine learning
+algorithms. Additionally, if we come across data that can not be classified by 
+our model we can further employ the concept of active learning and uncertainty
+sampling to close the loop where data goes through humans $\Rightarrow$ active 
+learning $\Rightarrow$ humans. Active learning coupled with inexpensive 
+crowdsourced data has been shown to be a cost effective method that is as 
+accurate as more expensive expert-based machine 
+learning~\cite{Barrington2012,Yan2011}, requiring only a small number of non-
+expert participants to match the performance of an expert 
+participant~\cite{Snow2008}.
+
 
 \section{Applications in Cultural Heritage}
 \label{sec:applications-heritage}
-While the majority of crowdsourcing techniques have thus far focused on fields
-outside of cultural heritage, the massive data collection capabilities of the
-crowd have started to find ways to improve the interpretation, digital 
-preservation, and exploration/discovery of cultural heritage objects and sites
-of interest.
+While the majority of crowdsourcing techniques have thus far focused on 
+fields outside of cultural heritage, the massive data collection 
+capabilities of the crowd have started to find ways to improve the 
+interpretation, digital preservation, and exploration/discovery of cultural 
+heritage objects and sites of interest.
 
 More importantly, the engagement of the public with the interpretation, 
 preservation, and discovery of cultural heritage offers an opportunity for
-someone to do something more than simply consume information, ``engag[ing] them
-in the fundamental reason that these digital collections exist in the
+someone to do something more than simply consume information, ``engag[ing] 
+them in the fundamental reason that these digital collections exist in the 
 first place~\cite{Owens2013}.''
 
-\subsection{Interpretation}
 
+\subsection{Interpretation}
 In museums, collections of cultural heritage objects are traditionally organized
 into galleries based around a common theme by professional curators. This
 organization helps museum visitors interpret the collections~\cite{Aletras2012}
@@ -604,8 +634,8 @@ The datasets that make up large digital collections make curation by the crowd
 a viable solution albeit one that has not fully been explored for the cultural
 heritage domain.
 
-\subsection{Digital Preservation}
 
+\subsection{Digital Preservation}
 Perhaps the earliest example of using crowdsourcing for cultural heritage was
 the use of CAPTCHAs~\cite{Ahn2003}, an automated test to tell humans and computers apart, to transcribe and digitize old texts. CAPTCHAs typically 
 consist of an image containing random distorted characters, used as a challenge
@@ -631,8 +661,8 @@ project dramatically increased the number of visitors to the library's
 website and was shown to be a novel meaningful engagement between the human
 annotators and this piece of history.
 
-\subsection{Exploration \& Discovery}
 
+\subsection{Exploration \& Discovery}
 New cultural heritage sites are still being unearthed and 
 analyzed~\cite{Lasaponara2007,Rowlands2007,Alexakis2009}, increasingly 
 through more modern methods, often utilizing large amounts of
@@ -651,14 +681,19 @@ navigating the large study area. During three field surveys, over 100
 sites of interest were visited, resulting in the discovery of fifty-five
 archaeological sites, ranging a human existence of over 3000 years.
 
+
 \section{Towards the Future}
-\textcolor{red}{TODO}
+Crowdsourcing has shown increasing potential as a platform to perform
+human computation tasks. 
+	
+As digitization methodology improves over the years, there will an 
+ever increasing demand for more and more human computation.
 
 \section{Acknowledgements}
 Thanks to Professor Yoav Freund for chairing my research exam committee and 
 for Serge Belongie and Bill Griswold for participating on the committee.
 
-\bibliography{bibs/ActiveLearning,bibs/Andrew-HCOMP,bibs/Andrew-CogSci,bibs/CulturalHeritage,bibs/hcomp,bibs/Web}
+\bibliography{bibs/ActiveLearning,bibs/Andrew-HCOMP,bibs/Andrew-CogSci,bibs/CulturalHeritage,bibs/hcomp,bibs/Web,bibs/Misc}
 \bibliographystyle{plain}
 
 \end{document}
