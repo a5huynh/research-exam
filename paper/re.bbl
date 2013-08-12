@@ -1,0 +1,384 @@
+\begin{thebibliography}{10}
+
+\bibitem{Adar2011}
+E.~Adar.
+\newblock {Why I hate Mechanical Turk research (and workshops)}.
+\newblock In {\em Proc. CHI Workshop on Crowdsourcing and Human Computation},
+  2011.
+
+\bibitem{Agarwal2009}
+Sameer Agarwal, Noah Snavely, Ian Simon, Steven~M Seitz, and Richard Szeliski.
+\newblock {Building Rome in a day}.
+\newblock {\em 2009 IEEE 12th International Conference on Computer Vision},
+  (Iccv):72--79, September 2009.
+
+\bibitem{Aletras2012}
+Nikolaos Aletras, Mark Stevenson, and Paul Clough.
+\newblock {Computing similarity between items in a digital library of cultural
+  heritage}.
+\newblock {\em Journal on Computing and Cultural Heritage}, 5(4):1--19, October
+  2012.
+
+\bibitem{Alexakis2009}
+Dimitrios Alexakis, Apostolos Sarris, Theodoros Astaras, and Konstantinos
+  Albanakis.
+\newblock {Detection of neolithic settlements in thessaly (Greece) through
+  multispectral and hyperspectral satellite imagery.}
+\newblock {\em Sensors (Basel, Switzerland)}, 9(2):1167--87, January 2009.
+
+\bibitem{Anderson2002}
+DP~Anderson, Jeff Cobb, and Eric Korpela.
+\newblock {SETI@ home: an experiment in public-resource computing}.
+\newblock {\em Communications of the ACM}, 45(11), 2002.
+
+\bibitem{Barabasi2001}
+a~L Barab\'{a}si, V~W Freeh, H~Jeong, and J~B Brockman.
+\newblock {Parasitic computing.}
+\newblock {\em Nature}, 412(6850):894--7, August 2001.
+
+\bibitem{Barrington2012}
+Luke Barrington, Douglas Turnbull, and Gert Lanckriet.
+\newblock {Game-powered machine learning.}
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America}, 109(17):6411--6, April 2012.
+
+\bibitem{Belleflamme2011}
+Paul Belleflamme.
+\newblock {Crowdfunding: Tapping the right crowd}.
+\newblock In {\em International Conference of the French Finance Association
+  (AFFI)}, 2011.
+
+\bibitem{Bernstein2010}
+MS~Bernstein, Greg Little, and RC~Miller.
+\newblock {Soylent: a word processor with a crowd inside}.
+\newblock {\em Proceedings of the 23nd annual ACM symposium on User interface
+  software and technology}, pages 313--322, 2010.
+
+\bibitem{Brew2010}
+A~Brew, Derek Greene, and P~Cunningham.
+\newblock {Using Crowdsourcing and Active Learning to Track Sentiment in Online
+  Media.}
+\newblock {\em ECAI}, 2010.
+
+\bibitem{Butcher1990}
+GS~Butcher, MR~Fuller, LS~McAllister, and PH~Geissler.
+\newblock {An evaluation of the Christmas Bird Count for monitoring population
+  trends of selected species}.
+\newblock {\em Wildlife Society Bulletin}, 18(2):129--134, 1990.
+
+\bibitem{Chen2009}
+Kuan-Ta Chen, Chen-Chi Wu, Yu-Chun Chang, and Chin-Laung Lei.
+\newblock {A crowdsourceable QoE evaluation framework for multimedia content}.
+\newblock {\em Proceedings of the seventeen ACM international conference on
+  Multimedia - MM '09}, page 491, 2009.
+
+\bibitem{Chrons2011}
+Otto Chrons and Sami Sundell.
+\newblock {Digitalkoot : Making Old Archives Accessible Using Crowdsourcing}.
+\newblock {\em Proceedings of the ACM SIGKDD Workshop on Human Computation},
+  pages 20--25, 2011.
+
+\bibitem{Cooper2010}
+Seth Cooper, Firas Khatib, Adrien Treuille, Janos Barbero, Jeehyung Lee,
+  Michael Beenen, Andrew Leaver-Fay, David Baker, Zoran Popovi\'{c}, and Foldit
+  Players.
+\newblock {Predicting protein structures with a multiplayer online game.}
+\newblock {\em Nature}, 466(7307):756--760, 2010.
+
+\bibitem{Crane2002}
+Gregory Crane.
+\newblock {Cultural heritage digital libraries: Needs and components}.
+\newblock In {\em Research and Advanced Technology for Digital Libraries},
+  pages 626--637, 2002.
+
+\bibitem{Donmez2009}
+Pinar Donmez, Jaime~G. Carbonell, and Jeff Schneider.
+\newblock {Efficiently learning the accuracy of labeling sources for selective
+  sampling}.
+\newblock {\em Proceedings of the 15th ACM SIGKDD international conference on
+  Knowledge discovery and data mining - KDD '09}, page 259, 2009.
+
+\bibitem{Druck2009}
+Gregory Druck, B.~Settles, and A.~McCallum.
+\newblock {Active learning by labeling features}.
+\newblock In {\em Proceedings of the 2009 Conference on Empirical Methods in
+  Natural Language Processing: Volume 1-Volume 1}, pages 81--90. Association
+  for Computational Linguistics, 2009.
+
+\bibitem{Dugas2012}
+Andrea~Freyer Dugas, Yu-Hsiang Hsieh, Scott~R Levin, Jesse~M Pines, Darren~P
+  Mareiniss, Amir Mohareb, Charlotte~a Gaydos, Trish~M Perl, and Richard~E
+  Rothman.
+\newblock {Google Flu Trends: correlation with emergency department influenza
+  rates and crowding metrics.}
+\newblock {\em Clinical infectious diseases : an official publication of the
+  Infectious Diseases Society of America}, 54(4):463--9, February 2012.
+
+\bibitem{Dwork2006}
+Cynthia Dwork, F~McSherry, Kobbi Nissim, and Adam Smith.
+\newblock {Calibrating noise to sensitivity in private data analysis}.
+\newblock {\em Theory of Cryptography}, pages 1--20, 2006.
+
+\bibitem{Frahm2010}
+JM~Frahm, P~Fite-Georgel, and D~Gallup.
+\newblock {Building Rome on a cloudless day}.
+\newblock {\em Computer Vision–ECCV 2010}, 49(3):352, June 2010.
+
+\bibitem{Freund1997}
+Y~Freund, HS~Seung, E~Shamir, and N~Tishby.
+\newblock {Selective Sampling Using the Query by Committee Algorithm}.
+\newblock {\em Machine learning}, 168:133--168, 1997.
+
+\bibitem{Ganti2011}
+RK~Ganti, F~Ye, and H~Lei.
+\newblock {Mobile crowdsensing: Current state and future challenges}.
+\newblock {\em Communications Magazine, IEEE}, (November):32--39, 2011.
+
+\bibitem{Goodchild2010}
+Michael~F. Goodchild and J.~Alan Glennon.
+\newblock {Crowdsourcing geographic information for disaster response: a
+  research frontier}.
+\newblock {\em International Journal of Digital Earth}, 3(3):231--241,
+  September 2010.
+
+\bibitem{Haklay}
+M~Haklay and Patrick Weber.
+\newblock {Openstreetmap: User-generated street maps}.
+\newblock {\em Pervasive Computing, IEEE}, 7(4):12--18, 2008.
+
+\bibitem{Howe2006}
+J.~Howe.
+\newblock {The rise of crowdsourcing}.
+\newblock {\em Wired magazine}, 14(14):1--5, 2006.
+
+\bibitem{Howe2008}
+Jeff Howe.
+\newblock {\em {Crowdsourcing: How the power of the crowd is driving the future
+  of business}}.
+\newblock 2008.
+
+\bibitem{Hull2006}
+Bret Hull, Vladimir Bychkovsky, and Yang Zhang.
+\newblock {CarTel: a distributed mobile sensor computing system}.
+\newblock {\em Proceedings of the 4th international conference on Embedded
+  networked sensor systems}, pages 125--138, 2006.
+
+\bibitem{GoogleTraffic}
+Google Inc.
+\newblock The bright side of sitting in traffic: Crowdsourcing road congestion
+  data, 2009.
+
+\bibitem{Ipeirotis2010a}
+Panagiotis~G. Ipeirotis, Foster Provost, and Jing Wang.
+\newblock {Quality management on Amazon Mechanical Turk}.
+\newblock {\em Proceedings of the ACM SIGKDD Workshop on Human Computation},
+  page~64, 2010.
+
+\bibitem{Karger}
+DR~Karger, S~Oh, and D~Shah.
+\newblock {Iterative learning for reliable crowdsourcing systems}.
+\newblock {\em Advances in neural information processing systems}, pages 1--9,
+  2011.
+
+\bibitem{Kittur2008}
+Aniket Kittur, E.H. Chi, and Bongwon Suh.
+\newblock {Crowdsourcing user studies with Mechanical Turk}.
+\newblock In {\em Proceeding of the twenty-sixth annual SIGCHI conference on
+  Human factors in computing systems}, pages 453--456. ACM, 2008.
+
+\bibitem{Kohring2003}
+GA~Kohring.
+\newblock {Implicit simulations using messaging protocols}.
+\newblock {\em International Journal of Modern Physics C}, 14(2):203--213,
+  2003.
+
+\bibitem{Lasaponara2007}
+Rosa Lasaponara and Nicola Masini.
+\newblock {Detection of archaeological crop marks by using satellite QuickBird
+  multispectral imagery}.
+\newblock {\em Journal of Archaeological Science}, 34(2):214--221, February
+  2007.
+
+\bibitem{Law2009a}
+Edith Law and L~Von Ahn.
+\newblock {Input-agreement: a new mechanism for collecting data using human
+  computation games}.
+\newblock {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}, pages 1197--1206, 2009.
+
+\bibitem{Lewis1994}
+DD~Lewis and WA~Gale.
+\newblock {A sequential algorithm for training text classifiers}.
+\newblock In {\em Proceedings of the 17th annual international ACM SIGIR
+  conference on Research and development in information retrieval}, pages
+  3--12, 1994.
+
+\bibitem{Lintott2008}
+Chris~J. Lintott, Kevin Schawinski, An\v{z}e Slosar, Kate Land, Steven Bamford,
+  Daniel Thomas, M.~Jordan Raddick, Robert~C. Nichol, Alex Szalay, Dan
+  Andreescu, Phil Murray, and Jan Vandenberg.
+\newblock {Galaxy Zoo: morphologies derived from visual inspection of galaxies
+  from the Sloan Digital Sky Survey ★}.
+\newblock {\em Monthly Notices of the Royal Astronomical Society},
+  389(3):1179--1189, September 2008.
+
+\bibitem{Mason2010a}
+Winter Mason and DJ~Watts.
+\newblock {Financial incentives and the performance of crowds}.
+\newblock {\em ACM SigKDD Explorations Newsletter}, 11(2):100--108, 2010.
+
+\bibitem{McCallum1998}
+A~McCallum and K~Nigam.
+\newblock {Employing EM and Pool-Based Active Learning for Text
+  Classification.}
+\newblock {\em ICML}, 98:350--358, 1998.
+
+\bibitem{Merelo2007}
+JJ~Merelo, AM~Garc\'{\i}a, and JLJ Laredo.
+\newblock {Browser-based distributed evolutionary computation: performance and
+  scaling behavior}.
+\newblock {\em Proceedings of the 2007 GECCO conference companion on Genetic
+  and evolutionary computation}, pages 2851--2858, 2007.
+
+\bibitem{Merelo-Guervos2008}
+JJ~Merelo-Guerv\'{o}s.
+\newblock {Asynchronous distributed genetic algorithms with Javascript and
+  JSON}.
+\newblock {\em Evolutionary Computation}, pages 1372--1379, 2008.
+
+\bibitem{Newman2012}
+Greg Newman, Andrea Wiggins, Alycia Crall, Eric Graham, Sarah Newman, and Kevin
+  Crowston.
+\newblock {The future of citizen science: emerging technologies and shifting
+  paradigms}.
+\newblock {\em Frontiers in Ecology and the Environment}, 10(6):298--304,
+  August 2012.
+
+\bibitem{Owens2013}
+Trevor Owens.
+\newblock {Digital Cultural Heritage and the Crowd}.
+\newblock {\em Curator: The Museum Journal}, 56(1):121--130, January 2013.
+
+\bibitem{Proctor2010}
+Nancy Proctor.
+\newblock {Digital: Museum as Platform, Curator as Champion, in the Age of
+  Social Media}.
+\newblock {\em Curator: The Museum Journal}, 53(1):35--43, 2010.
+
+\bibitem{Quinn2011}
+AJ~Quinn and BB~Bederson.
+\newblock {Human computation: a survey and taxonomy of a growing field}.
+\newblock {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}, pages 1403--1412, 2011.
+
+\bibitem{Rowlands2007}
+Aled Rowlands and Apostolos Sarris.
+\newblock {Detection of exposed and subsurface archaeological remains using
+  multi-sensor remote sensing}.
+\newblock {\em Journal of Archaeological Science}, 34(5):795--803, May 2007.
+
+\bibitem{Schwienbacher2010}
+A~Schwienbacher and B~Larralde.
+\newblock {Crowdfunding of small entrepreneurial ventures}.
+\newblock In {\em HANDBOOK OF ENTREPRENEURIAL FINANCE}. 2010.
+
+\bibitem{Settles2010}
+Burr Settles.
+\newblock {Active learning literature survey}.
+\newblock Technical report, 2010.
+
+\bibitem{Sheng2008}
+VS~Sheng, Foster Provost, and PG~Ipeirotis.
+\newblock {Get another label? improving data quality and data mining using
+  multiple, noisy labelers}.
+\newblock {\em Proceedings of the 14th ACM SIGKDD international conference on
+  Knowledge discovery and data mining}, pages 614--622, 2008.
+
+\bibitem{Silvertown2009}
+Jonathan Silvertown.
+\newblock {A new dawn for citizen science.}
+\newblock {\em Trends in ecology \& evolution}, 24(9):467--71, October 2009.
+
+\bibitem{Snow2008}
+Rion Snow, B~O'Connor, Daniel Jurafsky, and AY~Ng.
+\newblock {Cheap and fast---but is it good?: evaluating non-expert annotations
+  for natural language tasks}.
+\newblock In {\em Proceedings of the Conference on Empirical Methods in Natural
+  Language Processing}, number October, pages 254--263, 2008.
+
+\bibitem{Tang2011}
+John~C. Tang, Manuel Cebrian, Nicklaus~a. Giacobe, Hyun-Woo Kim, Taemie Kim,
+  and Douglas~"Beaker" Wickert.
+\newblock {Reflecting on the DARPA Red Balloon Challenge}.
+\newblock {\em Communications of the ACM}, 54(4):78, April 2011.
+
+\bibitem{Thiagarajan2009}
+Arvind Thiagarajan and Lenin Ravindranath.
+\newblock {VTrack: accurate, energy-aware road traffic delay estimation using
+  mobile phones}.
+\newblock {\em Proceedings of the 7th ACM Conference on Embedded Networked
+  Sensor Systems}, pages 85--98, 2009.
+
+\bibitem{Turnbull2007}
+Douglas Turnbull, Ruoran Liu, and Luke Barrington.
+\newblock {A game-based approach for collecting semantic annotations of music}.
+\newblock {\em Conference on Music}, pages 2--5, 2007.
+
+\bibitem{VonAhn2009}
+Luis von Ahn.
+\newblock {Human computation}.
+\newblock In {\em Proceedings of the 46th Annual Design Automation Conference},
+  page 418, New York, New York, USA, 2009. ACM Press.
+
+\bibitem{Ahn2003}
+Luis von Ahn, Manuel Blum, N~Hopper, and John Langford.
+\newblock {CAPTCHA: Using hard AI problems for security}.
+\newblock {\em ADVANCES IN CRYPTOLOGY — EUROCRYPT 2003}, pages 294--311,
+  2003.
+
+\bibitem{VonAhn2004}
+Luis von Ahn and Laura Dabbish.
+\newblock {Labeling images with a computer game}.
+\newblock {\em Proceedings of the 2004 conference on Human factors in computing
+  systems - CHI '04}, 6(1):319--326, 2004.
+
+\bibitem{VonAhn2008}
+Luis von Ahn and Laura Dabbish.
+\newblock {Designing games with a purpose}.
+\newblock {\em Communications of the ACM}, 51(8):57, August 2008.
+
+\bibitem{Ahn2007a}
+Luis von Ahn and S~Ginosar.
+\newblock {Improving Image Search with PHETCH}.
+\newblock In {\em Acoustics, Speech and \ldots}, pages 1209--1212, 2007.
+
+\bibitem{VonAhn2006}
+Luis von Ahn, Mihir Kedia, and Manuel Blum.
+\newblock {Verbosity: a game for collecting common-sense facts}.
+\newblock In {\em Proceedings of the SIGCHI conference on Human Factors in
+  computing systems}, pages 75--78. ACM, 2006.
+
+\bibitem{Ahn2006}
+Luis von Ahn, Ruoran Liu, and Manuel Blum.
+\newblock {Peekaboom : A Game for Locating Objects in Images}.
+\newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}, pages 55--64, 2006.
+
+\bibitem{VonAhn2008a}
+Luis von Ahn, Benjamin Maurer, Colin McMillen, David Abraham, and Manuel Blum.
+\newblock {reCAPTCHA: human-based character recognition via Web security
+  measures.}
+\newblock {\em Science (New York, N.Y.)}, 321(5895):1465--8, September 2008.
+
+\bibitem{Welinder}
+Peter Welinder, Steve Branson, Serge Belongie, and Pietro Perona.
+\newblock {The Multidimensional Wisdom of Crowds}.
+\newblock In {\em Advances in Neural Information Processing Systems}, 2010.
+
+\bibitem{Yan2011}
+Y~Yan and GM~Fung.
+\newblock {Active learning from crowds}.
+\newblock In {\em Proceedings of the 28th International Conference on Machine
+  Learning (ICML-11)}, pages 1161--2268, 2011.
+
+\end{thebibliography}
