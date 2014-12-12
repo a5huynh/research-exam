@@ -1,9 +1,10 @@
 research-exam
 =============
 
-This is the repository for the text & presentation of myresearch examination at University of California, San Diego as part and progress of my Ph.D.
+This is the repository for the text & presentation of my research examination at the 
+University of California, San Diego as part of the neverending progress towards my Ph.D.
 
-### **Crowdsourcing, Human Computation and Its Application to Cultural Heritage**
+#### **Crowdsourcing, Human Computation and Its Application to Cultural Heritage**
 
 The abstract for the paper & presentation is below:
 
